@@ -2,11 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-require('date')
-
 app.use((req, res, next) => {
   const time = new Date()
-  console.log(time)
+  console.log(time.getDate)
   console.log(req.method, 'from', req.originalUrl)
   next()
 })
