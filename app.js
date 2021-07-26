@@ -3,9 +3,12 @@ const app = express()
 const port = 3000
 
 app.use((req, res, next) => {
-  const time = new Date()
-  console.log(time.getDate)
-  console.log(req.method, 'from', req.originalUrl)
+  const dateObject = new Date()
+  const date = dateObject.toLocaleDateString()
+  const time = dateObject.toLocaleTimeString()
+  const method = req.method
+  const url = req.originalUrl
+  console.log(date, time, '|', method, 'from', url)
   next()
 })
 
