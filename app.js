@@ -3,12 +3,16 @@ const app = express()
 const port = 3000
 
 app.use((req, res, next) => {
-  const dateObject = new Date()
-  const date = dateObject.toLocaleDateString()
-  const time = dateObject.toLocaleTimeString()
-  const method = req.method
-  const url = req.originalUrl
-  console.log(date, time, '|', method, 'from', url)
+  const startTimeObj = new Date()
+  const date = startTimeObj.toLocaleDateString()
+  const time = startTimeObj.toLocaleTimeString()
+
+  res.on('finish', () => {
+    const endTimeObj = new Date()
+    const duration = endTimeObj - startTimeObj
+    console.log(date, time, '|', req.method, 'from', req.originalUrl, '|', 'total time:', duration, 'ms')
+  })
+
   next()
 })
 
