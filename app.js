@@ -4,13 +4,12 @@ const port = 3000
 
 app.use((req, res, next) => {
   const startTimeObj = new Date()
-  const date = startTimeObj.toLocaleDateString()
-  const time = startTimeObj.toLocaleTimeString()
+  const time = startTimeObj.toLocaleString()
 
   res.on('finish', () => {
     const endTimeObj = new Date()
     const duration = endTimeObj - startTimeObj
-    console.log(date, time, '|', req.method, 'from', req.originalUrl, '|', 'total time:', duration, 'ms')
+    console.log(time, '|', req.method, 'from', req.originalUrl, '|', 'total time:', duration, 'ms')
   })
 
   next()
