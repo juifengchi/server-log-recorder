@@ -5,12 +5,15 @@
 ## Features
 
 伺服器接到任一請求時，server log 上能正確印出：
+
 - 伺服器收到請求的時間戳記
 - 請求的 HTTP 方法
 - URL
 - 伺服器回應的時間長度
 
 ## Preview
+
+印出結果：
 
 ```
 2021-7-26 20:32:02 | GET from / | total time: 17 ms
