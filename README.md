@@ -1,6 +1,6 @@
-# Middleware Practice
+# Server Log Recorder
 
-實作一個中介軟體，當伺服器收到任何來自瀏覽器的 request 時，都會自動把資訊紀錄到 server log 裡。
+實作一個中介軟體，當伺服器收到任何來自瀏覽器的 request 時，都會自動把資訊紀錄到 server log 裡
 
 ## Features
 
@@ -24,13 +24,13 @@
 1. 打開終端機 (Terminal) 輸入以下訊息，下載專案至本機
 
 ```
-git clone https://github.com/ravenera0317/middleware-practice.git
+git clone https://github.com/ravenera0317/server-log-recorder.git
 ```
 
 2. 進入專案目錄資料夾
 
 ```
-cd middleware-practice
+cd server-log-recorder
 ```
 
 3. 安裝 npm 套件
