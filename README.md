@@ -19,6 +19,12 @@
 2021-7-26 20:32:02 | GET from / | total time: 17 ms
 ```
 
+## Prerequisites
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en/)
+- [Express](https://expressjs.com/)
+
 ## Installing
 
 1. 打開終端機 (Terminal) 輸入以下訊息，下載專案至本機
